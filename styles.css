@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Form styles */
+
+.contact-form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    max-width: 100%;
+}
+
+button[type="submit"]:hover /*Pseudo-class*/
+{
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* Flexbox Gallery */
+.flex-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.flex-item {
+    flex: 1 1 200px;
+    max-width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.flex-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;  /* 1 rem=16 px ; 1.5rem= 1.5*16=24 px*/
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('./images/hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70vh; 
+    
+    /* Adjust height as needed */
+    max-height: 600px;  /* Optional: maximum height for large screens */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+
+}
+
+.hero-content {
+    max-width: 90%; /* Ensures content doesn't stretch too wide */
+    padding: 0 15px; /* Adds some space on the sides */
+}
+
+.hero h1 {
+    font-size: 5rem; /* Adjust font size */
+}
+
+.hero p {
+    font-size: 2rem; /* Adjust font size */
+}
+
+
+video, audio {
+    max-width: 50%;
+}
+
+
+
+footer {
+    background: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Services List */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-top: 0px;
+}
+
+.service-item p {
+    margin: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+    }
+
+}
